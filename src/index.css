@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Satisfy&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Cinzel:wght@600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Libre Baskerville", serif;
+  --font-handwriting: "Satisfy", cursive;
+  --font-royal: "Cinzel", serif;
+  --color-parchment: #fdf6e3;
+  --color-ink: #1a0f0a;
+  --color-gold: #d4a76a;
+  --color-gold-dark: #8b6f47;
+  --color-royal-red: #720000;
+}
+
+body {
+  margin: 0;
+  overflow: hidden;
+  background-color: #0c0806;
+  background-image: 
+    radial-gradient(circle at 50% -20%, #2a1b12 0%, transparent 60%),
+    radial-gradient(circle at 100% 100%, #170d08 0%, transparent 50%),
+    radial-gradient(circle at 0% 100%, #150a05 0%, transparent 50%);
+  color: var(--color-ink);
+}
+
+html, body, * {
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
+.parchment-scroll {
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+}
+.parchment-scroll::-webkit-scrollbar {
+  width: 6px;
+}
+.parchment-scroll::-webkit-scrollbar-track {
+  background: transparent;
+}
+.parchment-scroll::-webkit-scrollbar-thumb {
+  background: rgba(139, 69, 19, 0.2);
+  border-radius: 10px;
+}
+.parchment-scroll::-webkit-scrollbar-thumb:hover {
+  background: rgba(139, 69, 19, 0.4);
+}
+
+.bg-parchment-texture {
+  background-color: #f8f1e1;
+  background-image: 
+    linear-gradient(rgba(240, 230, 210, 0.4) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(240, 230, 210, 0.4) 1px, transparent 1px),
+    url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.08'/%3E%3C/svg%3E");
+  background-size: 100% 100%, 100% 100%, auto;
+  box-shadow: inset 0 0 80px rgba(139, 69, 19, 0.15), 0 25px 60px rgba(0,0,0,0.6);
+}
+
+.gold-border {
+  border: 3px double var(--color-gold-dark);
+  box-shadow: inset 0 0 10px rgba(139,69,19,0.1);
+}
+
+.wax-seal {
+  background: radial-gradient(circle at 35% 35%, #e63946 0%, #a20000 40%, #5e0000 100%);
+  box-shadow: 
+    0 10px 20px rgba(0, 0, 0, 0.7),
+    inset -3px -3px 8px rgba(0, 0, 0, 0.8),
+    inset 3px 3px 10px rgba(255, 255, 255, 0.4);
+  border: 1px solid #4a0000;
+  position: relative;
+}
+
+.wax-seal::after {
+  content: '';
+  position: absolute;
+  inset: -1px;
+  border-radius: 50%;
+  box-shadow: inset 0 0 5px rgba(255,255,255,0.2);
+  pointer-events: none;
+}
