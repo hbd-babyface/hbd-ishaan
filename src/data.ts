@@ -22,7 +22,7 @@ export const letters: Record<string, LetterData> = {
   year: '2026',
   date: 'June 12th, in the year 2026',
   title: 'Happy Real Birthday',
-  image: '/2026-birthday-photo.png',
+  image: '2026-birthday-photo.png',
   content: [
     `dear babyface,`,
 
